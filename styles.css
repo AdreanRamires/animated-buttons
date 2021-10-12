@@ -1,0 +1,62 @@
+:root {
+    --bg-color: #e0e5ec;
+    --main-color: #4d3252;
+    --hover-color: #ff69b4;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color)
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 200px auto;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: -5px -5px 10px 5px #eaecf2, 5px 5px 25px 5px #b4bbca;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+    margin-right: 3px;
+}
+
+.btn:hover {
+    animation-name: 'hover';
+}
+
+@keyframes hover {
+    0% {
+        box-shadow: -5px -5px 10px 5px #eaecf2, 5px 5px 25px 5px #b4bbca,
+                inset 0px 0px 0px 0px #c3ccda, inset 0px 0px 0px 0px #ffffff;
+        color: var(--main-color);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px #eaecf2, 0px 0px 0px 0px #b4bbca,
+                inset 3px 3px 10px 0px #c3ccda, inset -3px -3px 10px 0px #ffffff;
+        color: var(--hover-color);
+    }
+}
