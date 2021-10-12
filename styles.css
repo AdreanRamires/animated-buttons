@@ -32,9 +32,10 @@ body {
     background-color: transparent;
     border-radius: 8px;
     box-shadow: -5px -5px 10px 5px #eaecf2, 5px 5px 25px 5px #b4bbca;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-fill-mode: forwards;
     cursor: pointer;
+   
 }
 
 img {
@@ -44,10 +45,11 @@ img {
 }
 
 .btn:hover {
-    animation-name: 'hover';
+    -webkit-animation-name: 'hover';
 }
 
-@keyframes hover {
+
+@-webkit-keyframes hover {
     0% {
         box-shadow: -5px -5px 10px 5px #eaecf2, 5px 5px 25px 5px #b4bbca,
                 inset 0px 0px 0px 0px #c3ccda, inset 0px 0px 0px 0px #ffffff;
